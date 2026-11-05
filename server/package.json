@@ -1,0 +1,31 @@
+{
+  "name": "sirkulafood-server",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "node dist/index.js",
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "seed": "tsx src/scripts/seed-demo.ts",
+    "recreate-admin": "tsx src/scripts/recreate-admin.ts",
+    "clear-demo-data": "tsx src/scripts/clear-demo-data.ts"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.118.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.0",
+    "express": "^5.1.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.19.2",
+    "tsx": "^4.21.0",
+    "typescript": "~7.0.2",
+    "vitest": "^5.0.5"
+  }
+}

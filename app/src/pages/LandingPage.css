@@ -1,0 +1,169 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.landing-page {
+  font-family: var(--font-sans, Helvetica, Arial, sans-serif);
+  background-color: #f7faf8;
+  color: #14231a;
+  overflow-x: clip;
+}
+
+.landing-page h1,
+.landing-page h2,
+.landing-page h3 {
+  text-wrap: balance;
+}
+
+/* Prevent CSS transform transitions from fighting GSAP frame updates;
+   enable silky hover lift only after GSAP entrance completes */
+[data-gsap] {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+}
+
+[data-gsap][data-gsap-done='true'] {
+  will-change: auto;
+}
+
+/* Hero subtle background */
+.sf-hero-bg {
+  position: relative;
+  background-color: #f3f8f4;
+}
+
+/* Framed Hero Showcase Card */
+.sf-hero-showcase {
+  position: relative;
+  border-radius: 26px;
+  padding: 10px;
+  background-color: #072918;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 24px 54px -16px rgba(4, 24, 14, 0.28);
+}
+
+.sf-hero-showcase-inner {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  aspect-ratio: 16 / 11.2;
+  background-color: #04180d;
+}
+
+.sf-hero-showcase-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: translateZ(0);
+  transition: transform 850ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .sf-hero-showcase:hover .sf-hero-showcase-img {
+    transform: scale(1.035) translateZ(0);
+  }
+}
+
+/* Step cards (01 / 02 / 03) */
+.sf-step-card {
+  background-color: #f4f8f5;
+  border: 1px solid #dce8df;
+  border-radius: 22px;
+  transition:
+    box-shadow 450ms cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 350ms cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 350ms ease;
+}
+
+.sf-step-card[data-gsap-done='true'] {
+  transition:
+    transform 450ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 450ms cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 350ms cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 350ms ease;
+}
+
+.sf-step-card:hover {
+  border-color: #b7d6c1;
+  background-color: #ffffff;
+  box-shadow: 0 20px 42px -18px rgba(15, 77, 46, 0.14);
+}
+
+.sf-step-card[data-gsap-done='true']:hover {
+  transform: translate3d(0, -4px, 0);
+}
+
+.sf-step-photo-wrap {
+  overflow: hidden;
+  border-radius: 14px;
+  aspect-ratio: 16 / 10;
+  background-color: #dfece3;
+}
+
+.sf-step-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translateZ(0);
+  transition: transform 750ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .sf-step-card:hover .sf-step-photo {
+    transform: scale(1.045) translateZ(0);
+  }
+}
+
+/* Program Sirkular Photo Cards */
+.sf-program-card {
+  background-color: #ffffff;
+  border: 1px solid #dce8df;
+  border-radius: 22px;
+  overflow: hidden;
+  transition:
+    box-shadow 450ms cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 350ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sf-program-card[data-gsap-done='true'] {
+  transition:
+    transform 450ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 450ms cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 350ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sf-program-card:hover {
+  border-color: #a9d1b6;
+  box-shadow: 0 22px 44px -18px rgba(15, 77, 46, 0.14);
+}
+
+.sf-program-card[data-gsap-done='true']:hover {
+  transform: translate3d(0, -4px, 0);
+}
+
+.sf-program-photo-wrap {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  background-color: #dfece3;
+}
+
+.sf-program-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translateZ(0);
+  transition: transform 750ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .sf-program-card:hover .sf-program-photo {
+    transform: scale(1.045) translateZ(0);
+  }
+}
+
+/* Flat Deep Forest Ground (No AI gradient blobs) */
+.sf-forest-band {
+  background-color: #0b3b24;
+}

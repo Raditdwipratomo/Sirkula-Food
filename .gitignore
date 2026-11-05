@@ -1,0 +1,69 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+dist-ssr/
+.vite/
+
+# Environment variables & secrets (CRITICAL: never commit secrets)
+.env
+.env.local
+.env.*.local
+*.env
+*.env.*
+!.env.example
+!*.env.example
+
+# AI Assistant Tooling, local caches & skill data
+.agents/
+.taste-skill/
+skills-lock.json
+
+# Design screenshots & raw mockup references (heavy assets)
+SirkulaFood/
+
+# Temporary notes & internal spec documents
+sirkula-revisi.md
+sirkulafood_project_specification*.md
+SirkulaFood_AI_Skills_Recommendation.md
+
+# Supabase local cache
+app/supabase/.temp/
+app/supabase/.branches/
+supabase/.temp/
+supabase/.branches/
+
+# IDE & Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# OS metadata
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Test & Coverage
+coverage/
+.nyc_output/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+
+docs
+sirkula-revisi.md 
+SirkulaFood_AI_Skills_Recommendation.md 
+sirkulafood_project_specification (1).md
+
+supabase
