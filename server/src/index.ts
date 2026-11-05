@@ -27,10 +27,12 @@ app.use(express.json({ limit: '1mb' }));
 
 app.use('/api', apiRouter);
 
-if (process.env.NODE_ENV !== 'test') {
+if (process.env.NODE_ENV !== 'test' && !process.env.VERCEL) {
   app.listen(serverEnv.PORT, () => {
     console.log(
       `[SirkulaFood Express Server] Berjalan di http://localhost:${serverEnv.PORT}`
     );
   });
 }
+
+export default app;
