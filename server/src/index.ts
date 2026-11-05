@@ -13,12 +13,13 @@ app.use(
       if (
         !origin ||
         allowedOrigins.includes(origin) ||
-        /^https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/.test(origin)
+        /^https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/.test(origin) ||
+        /^https:\/\/[a-zA-Z0-9_-]+\.vercel\.app$/.test(origin)
       ) {
         callback(null, true);
         return;
       }
-      callback(new Error(`Origin ${origin} tidak diizinkan oleh CORS`));
+      callback(null, false);
     },
     credentials: true,
   })
